@@ -1,6 +1,5 @@
 ---
-title: "Nonparametric Test for Change in Error Variance in Multiple Time Series"
-output: html_document
+output: github_document
 ---
 
 ```{r, include=FALSE}
@@ -20,7 +19,7 @@ The last part shows the R function for the proposed test for change in error var
 
 The following R function is used to simulate a time series with length *L*, change point at point *brkpt*, autoregressive parameter *rho*, error variance before and after the change point, *epsd*, and the coefficient of variation *cv* of the random effects. This function is used to generate the *N* time series following similar behavior as described by the common autoregressive parameter but exhibiting independence by having random effects.
 
-```{r Gendata, message=FALSE}
+```{r Gendata}
 
 # This function generates the kth time series, with specified parameters:
 
@@ -97,7 +96,7 @@ To illustrate the use of the proposed test for change in error variance, four da
 
 Multiple Time Series 1: No change in error variance 
 
-```{r Data1,message=FALSE}
+```{r Data1}
 # Set the random number generator
 set.seed(1)
 
@@ -122,7 +121,7 @@ ggplot(y1, aes(x=time, y=yt, group=indv, colour=indv))+geom_line(size=0.75)+
 
 Multiple Time Series 2: with small change in error variance
 
-```{r Data2,message=FALSE}
+```{r Data2}
 # Set the random number generator
 set.seed(2)
 
@@ -147,7 +146,7 @@ ggplot(y2, aes(x=time, y=yt, group=indv, colour=indv))+geom_line(size=0.75)+
 
 Multiple Time Series 3: With moderate change in error variance
 
-```{r Data3,message=FALSE}
+```{r Data3}
 # Set the random number generator
 set.seed(3)
 
@@ -172,7 +171,7 @@ ggplot(y3, aes(x=time, y=yt, group=indv, colour=indv))+geom_line(size=0.75)+
 
 Multiple Time Series 4: With large change in error variance
 
-```{r Data4,message=FALSE}
+```{r Data4}
 # Set the random number generator
 set.seed(4)
 
@@ -199,7 +198,7 @@ ggplot(y4, aes(x=time, y=yt, group=indv, colour=indv))+geom_line(size=0.75)+
 
 The proposed test uses the estimation procedure proposed by Veron Cruz and Barrios (2014) to estimate the common autoregressive parameter, the random effects, and the error variance before and after the change point. The following R function performs the proposed estimation procedure.  
 
-```{r Estimate, message=FALSE}
+```{r Estimate}
 # This function estimates the diferent parameters of the proposed model before and after the change point
 
 # data     = data frame that includes all Y(t)s in a column and all Y(t-1)s in another column
