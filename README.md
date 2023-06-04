@@ -106,7 +106,7 @@ Multiple Time Series 1: No change in error variance
 set.seed(1)
 
 # Simulate Data
-y1<-do.call(rbind,lapply(1:5,gendata,L=150,brkpt=75,rho=0.6,epsd=c(2,2),cv=0.05))
+y1<-do.call(rbind,lapply(1:15,gendata,L=150,brkpt=75,rho=0.6,epsd=c(2,2),cv=0.05))
 
 # First 10 observations
 head(y1,10)
@@ -131,7 +131,7 @@ Multiple Time Series 2: with small change in error variance
 set.seed(2)
 
 # Simulate Data
-y2<-do.call(rbind,lapply(1:5,gendata,L=150,brkpt=75,rho=0.6,epsd=c(2,2.5),cv=0.05))
+y2<-do.call(rbind,lapply(1:15,gendata,L=150,brkpt=75,rho=0.6,epsd=c(2,2.5),cv=0.05))
 
 # First 10 observations
 head(y2,10)
@@ -156,7 +156,7 @@ Multiple Time Series 3: With moderate change in error variance
 set.seed(3)
 
 # Simulate Data
-y3<-do.call(rbind,lapply(1:5,gendata,L=150,brkpt=75,rho=0.6,epsd=c(2,5),cv=0.05))
+y3<-do.call(rbind,lapply(1:15,gendata,L=150,brkpt=75,rho=0.6,epsd=c(2,5),cv=0.05))
 
 # First 10 observations
 head(y3,10)
@@ -181,7 +181,7 @@ Multiple Time Series 4: With large change in error variance
 set.seed(4)
 
 # Simulate Data
-y4<-do.call(rbind,lapply(1:5,gendata,L=150,brkpt=75,rho=0.6,epsd=c(2,10),cv=0.05))
+y4<-do.call(rbind,lapply(1:15,gendata,L=150,brkpt=75,rho=0.6,epsd=c(2,10),cv=0.05))
 
 # First 10 observations
 head(y4,10)
@@ -541,7 +541,7 @@ Using the four simulated multiple time series data sets, we perform the proposed
 
 ```{r test1, message=FALSE}
 
-ErrorVarTest(y1,N=5,L=150,brkpt=75,j=123)
+ErrorVarTest(y1,N=15,L=150,brkpt=75,j=123)
 
 ```
 
@@ -552,7 +552,7 @@ From the above test result, the value 1 is contained in the 95% confidence inter
 
 ```{r test2, message=FALSE}
 
-ErrorVarTest(y2,N=5,L=150,brkpt=75,j=124)
+ErrorVarTest(y2,N=15,L=150,brkpt=75,j=124)
 
 ```
 
@@ -562,7 +562,7 @@ We have enough evidence to reject the null hypothesis and conclude that there is
 
 ```{r test3, message=FALSE}
 
-ErrorVarTest(y3,N=5,L=150,brkpt=75,j=125)
+ErrorVarTest(y3,N=15,L=150,brkpt=75,j=125)
 
 ```
 
@@ -573,7 +573,7 @@ In the presence of moderate change in error variance, the proposed test also cor
 
 ```{r test4, message=FALSE}
 
-ErrorVarTest(y4,N=5,L=150,brkpt=75,j=126)
+ErrorVarTest(y4,N=15,L=150,brkpt=75,j=126)
 
 ```
 

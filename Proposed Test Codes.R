@@ -396,10 +396,10 @@ library(doParallel)
 set.seed(1)
 
 # Simulate Data
-y1<-do.call(rbind,lapply(1:5,gendata,L=150,brkpt=75,rho=0.6,epsd=c(2,2),cv=0.05))
+y1<-do.call(rbind,lapply(1:15,gendata,L=150,brkpt=75,rho=0.6,epsd=c(2,2),cv=0.05))
 
 # Test for Change in Error Variance
-ErrorVarTest(y1,N=5,L=150,brkpt=75,j=123)
+ErrorVarTest(y1,N=15,L=150,brkpt=75,j=123)
 
 
 
@@ -408,10 +408,10 @@ ErrorVarTest(y1,N=5,L=150,brkpt=75,j=123)
 set.seed(2)
 
 # Simulate Data
-y2<-do.call(rbind,lapply(1:5,gendata,L=150,brkpt=75,rho=0.6,epsd=c(2,2.5),cv=0.05))
+y2<-do.call(rbind,lapply(1:15,gendata,L=150,brkpt=75,rho=0.6,epsd=c(2,2.5),cv=0.05))
 
 # Test for Change in Error Variance
-ErrorVarTest(y2,N=5,L=150,brkpt=75,j=124)
+ErrorVarTest(y2,N=15,L=150,brkpt=75,j=124)
 
 
 
@@ -420,10 +420,10 @@ ErrorVarTest(y2,N=5,L=150,brkpt=75,j=124)
 set.seed(3)
 
 # Simulate Data
-y3<-do.call(rbind,lapply(1:5,gendata,L=150,brkpt=75,rho=0.6,epsd=c(2,5),cv=0.05))
+y3<-do.call(rbind,lapply(1:15,gendata,L=150,brkpt=75,rho=0.6,epsd=c(2,5),cv=0.05))
 
 # Test for Change in Error Variance
-ErrorVarTest(y3,N=5,L=150,brkpt=75,j=125)
+ErrorVarTest(y3,N=15,L=150,brkpt=75,j=125)
 
 
 
@@ -432,10 +432,10 @@ ErrorVarTest(y3,N=5,L=150,brkpt=75,j=125)
 set.seed(4)
 
 # Simulate Data
-y4<-do.call(rbind,lapply(1:5,gendata,L=150,brkpt=75,rho=0.6,epsd=c(2,10),cv=0.05))
+y4<-do.call(rbind,lapply(1:15,gendata,L=150,brkpt=75,rho=0.6,epsd=c(2,10),cv=0.05))
 
 # Test for Change in Error Variance
-ErrorVarTest(y4,N=5,L=150,brkpt=75,j=126)
+ErrorVarTest(y4,N=15,L=150,brkpt=75,j=126)
 
 
 
